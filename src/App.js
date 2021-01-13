@@ -2,6 +2,7 @@
 import './App.css';
 import Sum from "./component/Sum";
 import Multiple from "./component/Multiple"
+import Bmi from './component/Bmi';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <div className="col bprderClass">
           <Sum/></div>
         <div className="col bprderClass"><Multiple/></div>
-        <div className="col ">3</div>
+        <div className="col bprderClass"><Bmi/></div>
       </div>
       
     </div>
