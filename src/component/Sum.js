@@ -8,7 +8,7 @@ class Sum extends Component {
     }
 
     handleNum1(e) {
-        console.log(e)
+        // console.log(e)
         const num1 = (e.target.value)
         this.setState(prevState => {
             return {
@@ -18,7 +18,7 @@ class Sum extends Component {
         })
     }
     handleNum2(e) {
-        console.log(e)
+        // console.log(e)
         const num2 = (e.target.value)
         this.setState(prevState => {
             return {
