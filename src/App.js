@@ -8,8 +8,8 @@ function App() {
       <div className="row">
         <div className="col bprderClass">
           <Sum/></div>
-        <div className="col bprderClass">2</div>
-        <div className="col bprderClass">3</div>
+        <div className="col ">2</div>
+        <div className="col ">3</div>
       </div>
       
     </div>
