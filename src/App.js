@@ -1,6 +1,8 @@
 
 import './App.css';
 import Sum from "./component/Sum";
+import Multiple from "./component/Multiple"
+
 
 function App() {
   return (
@@ -8,7 +10,7 @@ function App() {
       <div className="row">
         <div className="col bprderClass">
           <Sum/></div>
-        <div className="col ">2</div>
+        <div className="col bprderClass"><Multiple/></div>
         <div className="col ">3</div>
       </div>
       
