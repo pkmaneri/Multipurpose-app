@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Multiple from "./Multiple"
 
 class Sum extends Component {
     state = {
@@ -36,22 +37,25 @@ class Sum extends Component {
         this.setState({
             'result': result
         })
-
-
-
     }
     render() {
         return (
-            <div className="container">
+            <>
                 <div className="row">
                     <div className="col bprderClass">
                         <input aria-label="num1-input" text="text" onChange={this.handleNum1.bind(this)} value={this.state.num1}></input>
                         <input aria-label="num2-input" text="text" onChange={this.handleNum2.bind(this)} value={this.state.num2}></input>
+                        <button aria-label="sum-button" onClick={this.handleSum.bind(this)}>Sum</button>
+                        <b aria-label="sum-output"  >{this.state.result}</b>
                     </div>
-                    <button aria-label="sum-button" onClick={this.handleSum.bind(this)}>Sum</button>
-                    <b aria-label="sum-output"  >{this.state.result}</b>
                 </div>
-            </div>
+                <div className="row">
+                    <div className="col">
+                        <Multiple />
+                    </div>
+                </div>
+            </>
+
         )
     }
 }

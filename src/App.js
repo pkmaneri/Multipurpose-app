@@ -8,12 +8,10 @@ import Bmi from './component/Bmi';
 function App() {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col bprderClass">
-          <Sum/></div>
-        <div className="col bprderClass"><Multiple/></div>
-        <div className="col bprderClass"><Bmi/></div>
-      </div>
+     
+          <Sum/>
+        {/* <div className="col bprderClass"><Multiple/></div> */}
+        {/* <div className="col bprderClass"><Bmi/></div> */}
       
     </div>
   );

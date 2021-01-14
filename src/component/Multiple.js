@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Bmi from "./Bmi"
 
 class Multiple extends Component {
     state = {
@@ -69,20 +70,23 @@ class Multiple extends Component {
     }
     render() {
         return (
-            <div className="container">
+            <>
                 <div className="row">
                     <div className="col bprderClass">
                         <input aria-label="num1-input" type="text" onChange={this.handleonchangeNum1.bind(this)} value={this.state.num1}></input>
                         <input aria-label="num2-input" type="text" onChange={this.handleonchangeNum2.bind(this)} value={this.state.num2}></input>
                         <input aria-label="num3-input" type="text" onChange={this.handleonchangeNum3.bind(this)} value={this.state.num3}></input>
                         <input aria-label="num4-input" type="text" onChange={this.handleonchangeNum4.bind(this)} value={this.state.num4}></input>
-                    </div>
-                    <div className="col bprderClass">
                         <button aria-label="multiple-button" onClick={this.handleClick.bind(this)}>Multiple</button>
                         <b aria-label="multiple-output">{this.state.result}</b>
                     </div>
                 </div>
-            </div>
+                <div className="row">
+                    <div className="bmi">
+                        <Bmi />
+                    </div>
+                </div>
+            </>
         )
     }
 }
