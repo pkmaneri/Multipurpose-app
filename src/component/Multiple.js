@@ -4,11 +4,24 @@ import Bmi from "./Bmi"
 class Multiple extends Component {
     state = {
         result: '',
-        num1: '',
-        num2: '',
-        num3: '',
-        num4: '',
+        num1: 0,
+        num2: 0,
+        num3: 0,
+        num4: 0,
     }
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            num1: nextProps.x,
+            num2: nextProps.x,
+            num3: nextProps.y,
+            num4: nextProps.y,
+        }, () => {
+            this.handleClick()
+
+        })
+        console.log(nextProps)
+    }
+
     handleonchangeNum1(e) {
         const num1 = e.target.value
         this.setState(prevState => {
@@ -58,7 +71,7 @@ class Multiple extends Component {
             }
         })
     }
-    handleClick(event) {
+    handleClick() {
         const num1 = this.state.num1;
         const num2 = this.state.num2;
         const num3 = this.state.num3;
@@ -83,7 +96,7 @@ class Multiple extends Component {
                 </div>
                 <div className="row">
                     <div className="bmi">
-                        <Bmi />
+                        <Bmi p={this.state.num1} r={this.state.num3} />
                     </div>
                 </div>
             </>

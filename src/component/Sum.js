@@ -51,12 +51,13 @@ class Sum extends Component {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <Multiple />
+                        <Multiple x={this.state.num1} y={this.state.num2} />
                     </div>
                 </div>
             </>
 
         )
+        
     }
 }
 export default Sum

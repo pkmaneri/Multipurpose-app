@@ -2,9 +2,19 @@ import React, { Component } from "react"
 
 class Bmi extends Component {
     state = {
-        mass: "",
-        height: "",
+        mass: 0,
+        height: 0,
         result: ""
+    }
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            mass: nextProps.p,
+            height:nextProps.r,
+        }, () => {
+            this.handleBmi()
+
+        })
+        console.log(nextProps)
     }
 
     handleMass(e) {
