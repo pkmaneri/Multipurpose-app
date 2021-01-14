@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Multiple from "./Multiple"
 
 class Bmi extends Component {
     state = {
@@ -6,6 +7,7 @@ class Bmi extends Component {
         height: 0,
         result: ""
     }
+
     componentWillReceiveProps(nextProps) {
         this.setState({
             mass: nextProps.p,
@@ -43,6 +45,11 @@ class Bmi extends Component {
             'result': result
         })
     }
+
+    handleButtonjbk(){
+        this.props.qsasas(this.state)
+
+    }
     render() {
         return (
             <>
@@ -52,6 +59,7 @@ class Bmi extends Component {
                         <input aria-label="height-input" text="text" onChange={this.handleHeight.bind(this)} value={this.state.height}></input>
                         <button aria-label="bmi-button" onClick={this.handleBmi.bind(this)}>bmi</button>
                         <b aria-label="bmi-output" >{this.state.result}</b>
+                        <button onClick={this.handleButtonjbk.bind(this)}>Clicktocallparentfunction</button>
                     </div>
                 </div>
             </>

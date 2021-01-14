@@ -9,6 +9,10 @@ class Multiple extends Component {
         num3: 0,
         num4: 0,
     }
+    update(data){
+       console.log(data)
+      }
+    
     componentWillReceiveProps(nextProps) {
         this.setState({
             num1: nextProps.x,
@@ -90,13 +94,13 @@ class Multiple extends Component {
                         <input aria-label="num2-input" type="text" onChange={this.handleonchangeNum2.bind(this)} value={this.state.num2}></input>
                         <input aria-label="num3-input" type="text" onChange={this.handleonchangeNum3.bind(this)} value={this.state.num3}></input>
                         <input aria-label="num4-input" type="text" onChange={this.handleonchangeNum4.bind(this)} value={this.state.num4}></input>
-                        <button aria-label="multiple-button" onClick={this.handleClick.bind(this)}>Multiple</button>
+                        <button aria-label="multiple-button" onClick={this.handleClick.bind(this)} >Multiple</button>
                         <b aria-label="multiple-output">{this.state.result}</b>
                     </div>
                 </div>
                 <div className="row">
                     <div className="bmi">
-                        <Bmi p={this.state.num1} r={this.state.num3} />
+                        <Bmi p={this.state.num1} r={this.state.num3}  qsasas={this.update}  />
                     </div>
                 </div>
             </>
