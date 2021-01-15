@@ -16,9 +16,12 @@ class Multiple extends Component {
             num2: childData.mass,
             num3: childData.height,
             num4: childData.height
-        })
-        }
+        }, () => {
+            this.handleClick()
 
+        })
+        console.log(childData)
+    }
     componentWillReceiveProps(nextProps) {
         this.setState({
             num1: nextProps.x,
