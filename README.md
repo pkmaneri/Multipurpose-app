@@ -4,3 +4,6 @@ doubut question parent to child.
 3- synchronous function- setstate+callback function,
 4- asynchrouns function- setstate are a synchronous function parrall operate in 
 5- componentwill recieved props-(nextprops)
+
+child to parent component
+-method pass 

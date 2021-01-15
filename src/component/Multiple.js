@@ -9,10 +9,16 @@ class Multiple extends Component {
         num3: 0,
         num4: 0,
     }
-    update(data){
-       console.log(data)
-      }
-    
+
+    callbackFunction = (childData) => {
+        this.setState({
+            num1: childData.mass,
+            num2: childData.mass,
+            num3: childData.height,
+            num4: childData.height
+        })
+        }
+
     componentWillReceiveProps(nextProps) {
         this.setState({
             num1: nextProps.x,
@@ -100,7 +106,7 @@ class Multiple extends Component {
                 </div>
                 <div className="row">
                     <div className="bmi">
-                        <Bmi p={this.state.num1} r={this.state.num3}  qsasas={this.update}  />
+                        <Bmi p={this.state.num1} r={this.state.num3} parentCallback = {this.callbackFunction} />
                     </div>
                 </div>
             </>

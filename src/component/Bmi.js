@@ -45,11 +45,10 @@ class Bmi extends Component {
             'result': result
         })
     }
+    sendBackData () {
+        this.props.parentCallback(this.state);
+   }
 
-    handleButtonjbk(){
-        this.props.qsasas(this.state)
-
-    }
     render() {
         return (
             <>
@@ -59,7 +58,7 @@ class Bmi extends Component {
                         <input aria-label="height-input" text="text" onChange={this.handleHeight.bind(this)} value={this.state.height}></input>
                         <button aria-label="bmi-button" onClick={this.handleBmi.bind(this)}>bmi</button>
                         <b aria-label="bmi-output" >{this.state.result}</b>
-                        <button onClick={this.handleButtonjbk.bind(this)}>Clicktocallparentfunction</button>
+                        <button onClick={this.sendBackData.bind(this)}>Clicktocallparentfunction</button>
                     </div>
                 </div>
             </>
