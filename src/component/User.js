@@ -13,7 +13,7 @@ function reducer(state , { filed, value }) {
     }
 }
 function User() {
-    const [state, dispatch] = useReducer(reducer,)
+    const [state, dispatch] = useReducer(reducer,initialState)
     const onChangeHandler = (e) => {
         dispatch({ field: e.target.value, value: e.target.value })
     }
