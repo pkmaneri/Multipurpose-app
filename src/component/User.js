@@ -9,7 +9,7 @@ const initialState = {
 function reducer(state , { filed, value }) {
     return {
         ...state,
-        filed: value
+       [filed] : value
     }
 }
 function User() {
